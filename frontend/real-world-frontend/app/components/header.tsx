@@ -1,21 +1,14 @@
+import Nav from "@/app/components/nav"
+
 export default function Header() {
     return(
-        <nav className="navbar navbar-light">
-            <div className="container">
-                <a className="navbar-brand" href="/">conduit</a>
-                <ul className="nav navbar-nav pull-xs-right">
-                <li className="nav-item">
-                    {/* Add "active" className when you're on that page" */}
-                    <a className="nav-link active" href="/">Home</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/login">Sign in</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="/register">Sign up</a>
-                </li>
-                </ul>
+        <header className="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-[url('/realworld-dual-mode.png')]">
+            <div>
+                <a href="/"><img src="/realworld-dual-mode.png" className="md:w-100 md:h-15 w-50 h-7" alt="real world logo" /></a>
             </div>
-        </nav>
+            <div>
+                <Nav />
+            </div>
+        </header>
     )
 }
