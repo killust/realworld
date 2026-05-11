@@ -1,5 +1,3 @@
-import Header from "@/app/components/header"
-import Footer from "@/app/components/footer"
 import "./globals.css"
 
 
@@ -21,12 +19,9 @@ export default function RootLayout({
                 type="text/css"
             />
         </head>
-      <body className="min-h-screen flex flex-col">
-        <Header />
+      <body className="min-h-screen flex flex-col bg-[whitesmoke]">
         {children}
-        <Footer />
       </body>
-      
     </html>
   );
 }

@@ -1,6 +1,6 @@
 export default function Footer() {
     return(
-        <footer className="mt-auto flex justify-between py-[60px] px-[60px] bg-[whitesmoke]">
+        <footer className="mt-auto flex justify-between py-[60px] px-[60px] bg-[white]">
             <div className="w-1/2 flex flex-col">
                 <a href="/" className="text-green-600 md:text-5xl text-2xl pb-2 font-bold">conduit</a>
                 <span className="md:text-lg text-[10px]">
