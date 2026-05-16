@@ -20,7 +20,7 @@ export default function SignupPage() {
             alert('Success! Redirecting to login....')
             setTimeout(() => router.push('/login'), 2000);
         } catch(error: any){
-            alert(error.response?.data?.username.[0] || 'Registration Failed');
+            alert(error.response?.data?.username?.[0] || 'Registration Failed');
         } finally{
             setLoading(false);
         }
@@ -57,15 +57,15 @@ export default function SignupPage() {
                                 <div className="w-3/4 text-center sm:text-left ">
                                     <div className="flex flex-row gap-2">
                                         <div className="text-center sm:text-left ">
-                                            <input type="checkbox" className="hover:cursor-pointer" id="rememberMe" /> 
+                                            <input type="checkbox" className="hover:cursor-pointer" id="rememberMe" required /> 
                                         </div>
                                         <div className="flex-1 text-center sm:text-left">
-                                            <label htmlFor="rememberMe" className="w-full">I agree to the processing of my personal information <span className="text-green-500 hover:text-black hover:cursor-pointer">(Terms of Service)</span></label>
+                                            <label htmlFor="rememberMe" className="w-full">I agree to the processing of my personal information <span className="text-green-500 hover:text-black hover:cursor-pointer  transition-colors duration-500 ease-in-out">(Terms of Service)</span></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="w-1/2 text-center sm:text-right">
-                                    <button className="py-3 px-5 bg-green-500 text-white hover:bg-[#f5f5f500] hover:border-gray-100 hover:text-black border rounded-lg hover:cursor-pointer transition-colors duration-1000 ease-in-out" disabled={loading}>{loading? 'Creating...' : 'Sign Up'}</button>
+                                    <button className="py-3 px-5 bg-green-500 text-white hover:bg-[#f5f5f500] hover:border-gray-100 hover:text-black border rounded-lg hover:cursor-pointer transition-colors duration-500 ease-in-out" disabled={loading}>{loading? 'Creating...' : 'Sign Up'}</button>
                                 </div>
                             </div>
                         </form>
